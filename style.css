@@ -1,0 +1,146 @@
+/* general styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+}
+main {
+  min-height: 100vh;
+  max-width: 350px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+.main-img {
+  display: block;
+  width: 100%;
+  height: 13rem;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* container */
+.container {
+  background: white;
+  border-radius: 1rem;
+}
+
+.text {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+}
+.text h2 {
+  color: hsl(217, 19%, 35%);
+  margin-bottom: 1rem;
+}
+.text p {
+  color: hsl(212, 23%, 69%);
+}
+
+.footer {
+  position: relative;
+}
+
+.person {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.person-img {
+  width: 3rem;
+  border-radius: 50%;
+}
+.person-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.person-info h4 {
+  color: hsl(217, 19%, 35%);
+}
+.person-info p {
+  color: hsl(212, 23%, 69%);
+}
+.share {
+  background: hsl(210, 46%, 95%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.social {
+  background: hsl(217, 19%, 35%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+.social h3 {
+  color: hsl(212, 23%, 69%);
+}
+
+.active .share {
+  background-color: hsl(212, 23%, 69%);
+}
+.active .social {
+  display: flex;
+}
+
+@media screen and (min-width: 1060px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 50rem;
+  }
+  main {
+    max-width: 1440px;
+  }
+  .main-img {
+    height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
+  .person {
+    padding-bottom: 2rem;
+    padding-top: 0;
+  }
+  .social {
+    top: -4rem;
+    left: auto;
+    right: -1rem;
+    transform: translateX(25%);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+  }
+  .social .share {
+    display: none;
+  }
+}
+
+.attribution a {
+  color: hsl(217, 19%, 35%);
+}
